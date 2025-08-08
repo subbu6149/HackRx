@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/main.py",
+      "use": "@vercel/python",
+      "config": {
+        "maxLambdaSize": "50mb"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "api/main.py"
+    }
+  ],
+  "env": {
+    "PYTHON_VERSION": "3.12",
+    "APP_MODULE": "api.main:app"
+  },
+  "functions": {
+    "api/main.py": {
+      "maxDuration": 60,
+      "memory": 1024
+    }
+  }
+}
