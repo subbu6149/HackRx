@@ -1,0 +1,27 @@
+# Ultra-minimal requirements for Vercel deployment
+# Optimized to avoid OOM errors
+
+# FastAPI Framework
+fastapi>=0.100.0
+uvicorn>=0.20.0
+
+# Google AI - core only
+google-generativeai>=0.3.0
+
+# Vector Database
+pinecone-client>=3.0.0
+
+# Basic text processing
+pypdf2>=3.0.0
+
+# Data processing - essential only
+pydantic>=2.4.0
+
+# Environment
+python-dotenv>=1.0.0
+
+# HTTP
+requests>=2.28.0
+
+# Utilities
+python-multipart>=0.0.6
